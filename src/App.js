@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <h1>
-          This is for assignment 2
+          This is for Assignment 2
           </h1>
         </p>
         <a
