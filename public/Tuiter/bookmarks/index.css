@@ -1,0 +1,151 @@
+body{
+    font-family: "Arial";
+    background-color: black;
+    border-style: solid;
+    border-color: rgb(47, 51, 54);
+    padding-left: 16px;
+}
+
+.wd-title {
+    color: white;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.wd-id {
+    color: dimgray;
+    font-size: 13px;
+    border-bottom-style: solid;
+    border-bottom-color: dimgray;
+    border-bottom-width: 1px;
+    padding-bottom: 12px;
+}
+
+.wd-dots-1 {
+    color:lightskyblue;
+    font-size:20px;
+    float:right;
+    margin-right: 16px;
+    display: inline;
+    font-weight: bold;
+
+}
+
+.wd-profile {
+    border-radius: 50%;
+    margin-right: 12px;
+    display: flex;
+}
+.wd-id-info {
+    align-items: flex-start;
+    display: flex;
+}
+
+.wd-tuiter-posts {
+    color: white;
+    max-width: 506px;
+    margin-bottom: 12px;
+}
+
+.wd-author {
+    font-size: 15px;
+    color: white;
+    display: inline;
+}
+
+.wd-handle {
+    font-size: 15px;
+    color: rgb(110,118,125);
+}
+
+.wd-dots-2 {
+    color:white;
+    font-size:20px;
+    float:right;
+    margin-right: 16px;
+    display: inline;
+}
+
+.wd-main-content {
+    color: white;
+    font-size: 15px;
+    max-width: 506px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.wd-tuiter-content {
+    border: 1px solid rgb(110, 118, 125);
+    border-radius: 20px;
+}
+
+.wd-content-img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 504px;
+    height: 264px;
+    border-bottom-width: 0px;
+}
+
+.wd-content-padding {
+    margin: 12px;
+}
+
+.wd-content-1 {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+}
+
+.wd-content-body {
+    font-size: 15px;
+    color: rgb(110,118,125);
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+.wd-content-link {
+    margin-top: 12px;
+    font-size: 15px;
+    color: rgb(110,118,125);
+    float: left;
+    margin-bottom: 12px;
+}
+
+.wd-link {
+    float: left;
+}
+
+.wd-link-container {
+    text-align: left;
+}
+
+.wd-box {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wd-grey-small-word {
+    font-size: 13px;
+    color: lightgray;
+}
+
+.wd-table {
+    margin-top: 12px;
+    width: 370pt;
+}
+
+.wd-icon-color {
+    color: lightgray;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.wd-icon-color-red {
+    color: red;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.wd-line-slim {
+    border-color: rgb(47, 51, 54);
+}
