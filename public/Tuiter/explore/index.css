@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-content-border {
+    outline: 1px solid rgb(47, 51, 54);
+    padding: 4px;
+}
+
+.wd-tuiter-search {
+    background-color: rgb(33,35,39);
+    color: white;
+    border-radius: 8px;
+    height: 30px;
+    width: 300%;
+    padding-left: 16px;
+}
+
+.wd-thick-br {
+    border: 16px solid rgb(33,33,33);
+    border-top: rgb(33,33,33);
+}
+
+.wd-body {
+    background-color: black;
+}
+
+.wd-explore-bar-highlight {
+    padding: 16px;
+    font-size: 15px;
+    color: rgb(29, 161, 242);
+    border-bottom: 4px solid rgb(29, 161, 242);
+    text-decoration: none;
+}
+
+.wd-explore-bar {
+    padding: 16px;
+    font-size: 15px;
+    color: rgb(110, 118, 125);
+    text-decoration: none;
+}
+
+.wd-float-left-search {
+    float: left;
+}
+
+.wd-float-right-search {
+    float: right;
+    padding-right: 12px;
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.wd-offset-left {
+    margin-left: 16px;
+}
+
+.wd-float-left {
+    float: left;
+}
+.wd-float-right {
+    float:right;
+    margin-right: 16px;
+}
+
+.wd-dots {
+    padding-right: 10px;
+    font-size: 16px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-white-dots{
+    padding-right: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+.wd-grey-word {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-white-topic {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+.wd-white-small-word {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+
+.wd-line-slim {
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-topic-block {
+    height: 110px;
+}
+
+
+.wd-all-round {
+    border-radius: 15pt;
+}
+
+
+
+
