@@ -3,90 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="public/tuiter/styles.css"
-          rel="stylesheet"/>
-    <link href="index.css"
-          rel="stylesheet"/>
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"/>
+<!--    <link href="public/tuiter/styles.css" rel="stylesheet"/>-->
+    <link href="index.css" rel="stylesheet"/>
 </head>
 
-<body class="wd-body">
-<div class="wd-content-border">
-    <div class="wd-float-left-search">
-        <input class="wd-tuiter-search" type="text" id="wd-search-bar"
-               placeholder="&#128269;    Search Tuiter"/>
-    </div>
-    <div class="wd-float-right-search">
-        <a href="explore-settings.html"> <img height="33px" width="33px" src="img/gear.png"> </a>
-    </div>
-    <div class="wd-float-done"></div>
-    <br/> <br/>
-    <a class="wd-explore-bar-highlight" href="explore/forYou.html">For you</a>
-    <a class="wd-explore-bar" href="explore/trending.html">Trending</a>
-    <a class="wd-explore-bar" href="explore/covid19.html">COVID-19</a>
-    <a class="wd-explore-bar" href="explore/news.html">News</a>
-    <a class="wd-explore-bar" href="explore/sports.html">Sports</a>
-    <a class="wd-explore-bar" href="explore/entertainment.html">Entertainment</a>
-    <br/><br/>
-</div>
-<hr class="wd-thick-br"/>
-<div class="wd-content-border">
-    <div class="wd-offset-left">
-        <span class="wd-float-right wd-white-dots">...</span>
-        <br/>
-        <span class="wd-grey-word">Trending in Science</span>
-        <span class="wd-float-right wd-dots">...</span>
-        <br/>
-        <span class="wd-white-topic">Starship<br/></span>
-        <span class="wd-grey-word">55.5K Tweets<br/></span>
+<body class="bg-black">
+<div class="container mt-2">
+    <div class="row flex-nowrap">
+<!--        Nav-->
+        <div class="col-2  col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+            <div class="list-group">
+                <a class="list-group-item bg-black">
+                    <i class="fa-solid fa-t text-white"></i></a>
+                    <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-house-chimney text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Home</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-hashtag text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Explore</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-bell text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Notifications</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-envelope text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Messages</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-bookmark text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Bookmarks</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-list text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Lists</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-user text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> Profile</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-black">
+                    <i class="fa-solid fa-comment-dots text-white"></i>
+                    <span class="d-none d-xl-inline-block text-white"> More</span>
+                </a>
+            </div>
+            <button class="btn btn-primary w-100 mt-1 rounded-pill">Tweet</button>
+        </div>
+<!--        Main-->
+        <div class="col-10  col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6 wd-content-border">
+            <div class="row">
+                <div class="col-11 position-relative">
+                    <input class="ps-5 form-control rounded-pill wd-tuiter-search mt-1" placeholder="Search Tuiter"/>
+                    <i class="fa-solid fa-magnifying-glass position-absolute wd-search-tuiter wd-search-color"></i>
+                </div>
+                <div class="col-1">
+                    <i class="fa-solid fa-gear text-primary wd-explore-gear text-white"></i>
+                </div>
+            </div>
 
-        <br/>
-        <span class="wd-grey-word">Sports - Trending</span>
-        <span class="wd-float-right wd-dots">...</span>
-        <br/>
-        <span class="wd-white-topic">Joe Rogan<br/></span>
-        <span class="wd-grey-word">5,218 Tweets<br/></span>
-    </div>
-    <hr class="wd-line-slim">
-    <div class="wd-offset-left">
-        <p class="wd-topic-block">
-            <img src="img/nyt.png" style="width: 15px; height: 15px; vertical-align:middle">
-            <span class="wd-white-small-word">The New York Times </span>
-            <img src="img/check.png" style="width: 15px; height: 15px; vertical-align:middle">
-            <span class="wd-grey-word"> · Yesterday</span>
-            <img src="img/rocket.webp" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>
-            <span class="wd-white-topic">CNN's Cuomo conundrum: A star anchor with a brother in trouble</span>
-        </p>
-    </div>
-    <hr class="wd-line-slim">
-    <div class="wd-offset-left">
-        <p class="wd-topic-block">
-            <span class="wd-grey-word">COVID-19 · LIVE</span>
-            <img src="img/news.png" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>
-            <span class="wd-white-topic">COVID-19: News and updates for Massachusetts</span>
-        </p>
-    </div>
-    <hr class="wd-line-slim">
-    <div class="wd-offset-left">
-        <p class="wd-topic-block">
-            <img src="img/bb.png" style="width: 15px; height: 15px; vertical-align:middle">
-            <span class="wd-white-small-word">Bloomberg Opinion </span>
-            <img src="img/check.png" style="width: 15px; height: 15px; vertical-align:middle">
-            <span class="wd-grey-word"> · Yesterday</span>
-            <img src="img/bb.jpeg" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>
-            <span class="wd-white-topic">Thinking about getting a booster? Read this first.</span>
-        </p>
-    </div>
-    <hr class="wd-line-slim">
-    <div class="wd-offset-left">
-        <p>
-            <span class="wd-grey-word">Treading in United States</span>
-            <svg width="16" height="1" class="wd-float-right"></svg>
-            <span class="wd-float-right wd-grey-word">...</span>
-            <br/>
-            <span class="wd-white-topic">Wonder Bread<br/></span>
-            <span class="wd-grey-word">1,259 Tweets<br/></span>
-        </p>
+
+            <ul class="nav nav-tabs mt-2 ">
+                <li class="nav-item ">
+                    <a class="nav-link wd-search-color" href="#">For you</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-search-color" href="#">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-search-color" href="#">COVID-19</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-search-color" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link wd-search-color" href="#">Sports</a>
+                </li>
+                <li class="nav-item wd-selected">
+                    <a class="nav-link d-none d-md-block text-white " href="#">Entertainment</a>
+                </li>
+            </ul>
+
+            <div class="position-relative">
+                <img class="w-100 wd-content-border"
+                     src="https://www.ontarioparks.com/parksblog/wp-content/uploads/2021/10/Quetico_Dark_Sky-825x510.jpg">
+                <h6 class="wd-title-position wd-offset-left">Music · Last night </h6>
+                <h3 class="position-absolute bottom-0 left-0 text-white wd-offset-left">BTS and Coldplay release their new song, My Universe 🪐</h3>
+            </div>
+
+
+            <ul class="list-group">
+                <li class="list-group-item mt-2 mb-3" style="background-color: black">
+                    <span class="wd-tuit-topic">Trending in R&B & Soul</span>
+                    <div class="wd-float-right fa fa-ellipsis-h" style="color: grey">
+                    </div>
+                    <br>
+                    <span style="color: white"><b>R Kelly</b></span>
+                    <span ></span>
+                    <br>
+                    <span class="wd-tuit-topic">18.2K Tweets</span>
+                </li>
+
+                <li class="list-group-item mb-3" style="background-color: black">
+                    <span class="wd-tuit-topic">Trending in R&B & Soul</span>
+                    <div class="wd-float-right fa fa-ellipsis-h" style="color: grey">
+                    </div>
+                    <br>
+                    <span style="color: white"><b>Chloe</b></span>
+                    <span ></span>
+                    <br>
+                    <span class="wd-tuit-topic">Trending with</span>
+                    <span style="color: dodgerblue">Halle</span>
+                </li>
+
+                <li class="list-group-item" style="background-color: black">
+
+                    <img class="wd-times-icon " src="https://www.shareicon.net/data/128x128/2016/10/20/846415_blue_512x512.png">
+                    <span style="color: white"><b>The Times</b></span>
+                    <i class="fa fa-check-circle mt-1 fa-inverse mb-2"></i>
+                    <span class="wd-tuit-topic"> · September 24, 2021</span>
+
+                    <br>
+                    <span style="color: white"><b>Stanley Tucci: 'Food or Sex? That's the cruellest question...'</b></span>
+                    <img src="https://images.fastcompany.net/image/upload/w_1250,ar_16:9,c_fill,g_auto,f_auto,q_auto,fl_lossy/wp-cms/uploads/2022/03/p-1-90733887-how-people-feel-about-living-in-small-spaces-is-more-about-psychology-than-square-footage.webp"
+                         class="wd-float-right wd-middle-pic rounded m-0">
+                    <br>
+                </li>
+            </ul>
+        </div>
+<!--        Who to follow-->
+        <div class="d-none d-lg-block col-lg-5 col-xl-4 col-xxl-4">
+            <ul class="list-group list-unstyled wd-bg-grey border-radius-2">
+                <li class="list-group-item wd-right-title text-white"> Who to follow </li>
+
+                <li class="wd-bg-grey">
+                    <div class="row mx-0  p-1">
+                        <div class="col-2">
+                            <img src="https://img.zhizuoxi.com/d/file/202112/ty55l021mav.jpg" class="wd-tuit-explore rounded-circle">
+                        </div>
+                        <div class="col-7">
+                            <span class="wd-tuit-bold text-white">The Babylon Bee</span>
+                            <span><i class="fa-solid fa-circle-check fa-1x fa-inverse"></i></span>
+                            <p class=" wd-tuit-topic">@TheBabylonBee </p>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn bg-light rounded-pill mt-2"><strong> Follow </strong></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="row mx-0 p-1">
+                        <div class="col-2">
+                            <img src="https://static-assets-1.truthsocial.com/tmtg:prime-ts-assets/accounts/avatars/107/804/720/352/471/774/original/49f6b5179f080785.jpeg" class="wd-tuit-explore rounded-circle">
+                        </div>
+                        <div class="col-7">
+                            <span class="wd-tuit-bold text-white">Jack Posobiec</span>
+                            <img class="wd-flag-icon" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg">
+                            <span><i class="fa-solid fa-circle-check fa-1x fa-inverse"></i></span>
+                            <p class=" wd-tuit-topic">@jackPosobiec </p>
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="btn bg-light rounded-pill mt-2"><strong> Follow </strong></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="text-primary p-2">
+                        Show More
+                    </div>
+                </li>
+            </ul>
+            <div class="text-secondary pt-2 ps-3"> Terms of Service   Privacy Policy   Cookie Policy</div>
+            <div class="text-secondary ps-3"> Ads Info   More ... @2023 Twitter. Inc</div>
+
+        </div>
+        </div>
     </div>
 </div>
+
+
+
+
+<!--<div class="wd-content-border">-->
+<!--    <div class="wd-float-left-search">-->
+<!--        <input class="wd-tuiter-search" type="text" id="wd-search-bar"-->
+<!--               placeholder="&#128269;    Search Tuiter"/>-->
+<!--    </div>-->
+<!--    <div class="wd-float-right-search">-->
+<!--        <a href="explore-settings.html"> <img height="33px" width="33px" src="img/gear.png"> </a>-->
+<!--    </div>-->
+<!--    <div ></div>-->
+<!--    <br/> <br/>-->
+<!--    <a class="wd-explore-bar-highlight" href="explore/forYou.html">For you</a>-->
+<!--    <a class="wd-explore-bar" href="explore/trending.html">Trending</a>-->
+<!--    <a class="wd-explore-bar" href="explore/covid19.html">COVID-19</a>-->
+<!--    <a class="wd-explore-bar" href="explore/news.html">News</a>-->
+<!--    <a class="wd-explore-bar" href="explore/sports.html">Sports</a>-->
+<!--    <a class="wd-explore-bar" href="explore/entertainment.html">Entertainment</a>-->
+<!--    <br/><br/>-->
+<!--</div>-->
+<!--<hr class="wd-thick-br"/>-->
+<!--<div class="wd-content-border">-->
+<!--    <div class="wd-offset-left">-->
+<!--        <span class="wd-float-right wd-white-dots">...</span>-->
+<!--        <br/>-->
+<!--        <span class="wd-grey-word">Trending in Science</span>-->
+<!--        <span class="wd-float-right wd-dots">...</span>-->
+<!--        <br/>-->
+<!--        <span class="wd-white-topic">Starship<br/></span>-->
+<!--        <span class="wd-grey-word">55.5K Tweets<br/></span>-->
+
+<!--        <br/>-->
+<!--        <span class="wd-grey-word">Sports - Trending</span>-->
+<!--        <span class="wd-float-right wd-dots">...</span>-->
+<!--        <br/>-->
+<!--        <span class="wd-white-topic">Joe Rogan<br/></span>-->
+<!--        <span class="wd-grey-word">5,218 Tweets<br/></span>-->
+<!--    </div>-->
+<!--    <hr class="wd-line-slim">-->
+<!--    <div class="wd-offset-left">-->
+<!--        <p class="wd-topic-block">-->
+<!--            <img src="img/nyt.png" style="width: 15px; height: 15px; vertical-align:middle">-->
+<!--            <span class="wd-white-small-word">The New York Times </span>-->
+<!--            <img src="img/check.png" style="width: 15px; height: 15px; vertical-align:middle">-->
+<!--            <span class="wd-grey-word"> · Yesterday</span>-->
+<!--            <img src="img/rocket.webp" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>-->
+<!--            <span class="wd-white-topic">CNN's Cuomo conundrum: A star anchor with a brother in trouble</span>-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <hr class="wd-line-slim">-->
+<!--    <div class="wd-offset-left">-->
+<!--        <p class="wd-topic-block">-->
+<!--            <span class="wd-grey-word">COVID-19 · LIVE</span>-->
+<!--            <img src="img/news.png" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>-->
+<!--            <span class="wd-white-topic">COVID-19: News and updates for Massachusetts</span>-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <hr class="wd-line-slim">-->
+<!--    <div class="wd-offset-left">-->
+<!--        <p class="wd-topic-block">-->
+<!--            <img src="img/bb.png" style="width: 15px; height: 15px; vertical-align:middle">-->
+<!--            <span class="wd-white-small-word">Bloomberg Opinion </span>-->
+<!--            <img src="img/check.png" style="width: 15px; height: 15px; vertical-align:middle">-->
+<!--            <span class="wd-grey-word"> · Yesterday</span>-->
+<!--            <img src="img/bb.jpeg" class="wd-float-right wd-all-round" height="100px" , width="100px"><br/>-->
+<!--            <span class="wd-white-topic">Thinking about getting a booster? Read this first.</span>-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    <hr class="wd-line-slim">-->
+<!--    <div class="wd-offset-left">-->
+<!--        <p>-->
+<!--            <span class="wd-grey-word">Treading in United States</span>-->
+<!--            <svg width="16" height="1" class="wd-float-right"></svg>-->
+<!--            <span class="wd-float-right wd-grey-word">...</span>-->
+<!--            <br/>-->
+<!--            <span class="wd-white-topic">Wonder Bread<br/></span>-->
+<!--            <span class="wd-grey-word">1,259 Tweets<br/></span>-->
+<!--        </p>-->
+<!--    </div>-->
+<!--</div>-->
 </body>
 </html>
