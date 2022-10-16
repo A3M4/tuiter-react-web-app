@@ -9,7 +9,12 @@ body {
 }
 
 .wd-tuiter-search {
-    background-color: rgb(33,35,39);
+    background-color: white;
+    border: rgb(33,33,33);
+}
+
+.wd-tuiter-search-gear {
+    background-color: dodgerblue;
     border: rgb(33,33,33);
 }
 
