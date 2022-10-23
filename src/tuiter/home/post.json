@@ -1,0 +1,29 @@
+[
+  {
+    "avatarIcon": "nasa.png",
+    "userName": "SpaceX",
+    "handle": "elonmusk",
+    "time": "23h",
+    "content": "I was gonna say something when Sara fell out, but fifty dollars is fifty dollars",
+    "image": "as.webp",
+    "newTitle": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
+    "newsContent": "Mike and his wife Sara went to the state fair every year, and every year Mike would say, \"Sara, I'd like to ride in that airplane.\"....\n",
+    "comment": "4.2k",
+    "share": "3.5k",
+    "like": "37.5k"
+  },
+  {
+    "avatarIcon": "ny.webp",
+    "userName": "New York Post",
+    "handle": "nypost",
+    "time": "23h",
+    "content": "Sara always replied, \"I know, Mike, but that airplane ride costs fifty dollars, and fifty dollars is fifty dollars.\"",
+    "image": "read.webp",
+    "newTitle": "",
+    "newsContent": "",
+    "newsLink": "",
+    "comment": "965",
+    "share": "2.4k",
+    "like": "4k"
+  }
+]
