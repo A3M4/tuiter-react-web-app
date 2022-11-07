@@ -2,102 +2,63 @@ import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import {useNavigate} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {updateProfile} from "../reducers/profile-reducer";
+import {updateProfile} from "./profile-reducer";
 
 const EditProfile = () => {
     const navigate = useNavigate();
     const profile = useSelector(state => state.profile);
     const dispatch = useDispatch();
-
-    const [name, setName] = useState(profile.firstName + ' ' + profile.lastName);
-    const [bio, setBio] = useState(profile.bio);
-    const [location, setLocation] = useState(profile.location);
-    const [website, setWebsite] = useState(profile.website);
-    const birthdayData = profile.dateOfBirth.split('/')
-    const [birthday, setBirthday] = useState(birthdayData[2] + "-" + birthdayData[0] + '-' + birthdayData[1]);
+    let [name, setName] = useState(profile.firstName + ' ' + profile.lastName);
+    let [bio, setBio] = useState(profile.bio);
+    let [location, setLocation] = useState(profile.location);
+    let [website, setWebsite] = useState(profile.website);
+    let birthdayDate= profile.dateOfBirth.split('/')
+    let [birthday, setBirthday] = useState(birthdayDate[2] + "-" + birthdayDate[0] + '-' + birthdayDate[1]);
 
     const updateProfileHandler = () => {
-        //call dispatch
         dispatch(updateProfile({name, bio, location, website, birthday}));
-        //change route
         navigate('/tuiter/profile');
     }
     return (
         <>
             <Link to="/tuiter/profile">
-                <i className="bi bi-x fs-4 text-black"></i>
+                <i className="bi bi-x text-black fs-5"></i>
             </Link>
-
-            <span className="text-black fw-bold fs-4 ms-5">Edit Profile</span>
-            <button
-                className="btn btn-dark rounded-pill float-end"
-                onClick={updateProfileHandler}
-            >
+            <span className=" fs-3 ms-3"><b>Edit Profile</b></span>
+            <button className="btn btn-dark rounded-pill float-end" onClick={updateProfileHandler}>
                 Save
             </button>
-            <div className="position-relative mt-2 mb-5">
-                <img className="w-100" style={{"opacity": "0.6"}} src="/images/bg.jpeg" alt="..."/>
-                <i className="position-absolute bi bi-camera fs-4 ps-2 pe-2 pt-1 pb-1 rounded-pill text-white"
-                   style={{"left": "40%", "bottom": "40%", "background": "black", "opacity": "0.6"}}></i>
-                <i className="position-absolute bi bi-x fs-4 ps-2 pe-2 pt-1 pb-1 rounded-pill text-white"
-                   style={{"left": "52%", "bottom": "40%", "background": "black", "opacity": "0.6"}}></i>
-
-                <div className="position-absolute rounded-pill"
-                     style={{
-                         "height": "62%",
-                         "width": "19%",
-                         "left": "4.5%",
-                         "bottom": "-30%",
-                         "background": "white"
-                     }}></div>
-                <img className="position-absolute rounded-pill"
-                     style={{"height": "60%", "width": "18%", "left": "5%", "bottom": "-30%", "opacity": "0.6"}}
-                     src="/images/bg.jpeg" alt="..."/>
-                <i className="position-absolute bi bi-camera fs-4 ps-2 pe-2 pt-1 pb-1 rounded-pill text-white"
-                   style={{"left": "11%", "bottom": "-10%", "background": "black", "opacity": "0.6"}}></i>
+            <div className="position-relative mt-3 mb-4">
+                <img className="w-100" style={{"opacity": "0.5"}} src="/images/pic.jpg" alt="..."/>
+                <i className="position-absolute bi bi-camera rounded-circle text-white fs-5 ps-2 pe-2 pt-1 pb-1" style={{"left": "42%", "bottom": "50%", "background": "black", "opacity": "0.5"}}></i>
+                <i className="position-absolute rounded-circle text-white bi bi-x fs-5 ps-2 pe-2 pt-1 pb-1" style={{"left": "55%", "bottom": "50%", "background": "black", "opacity": "0.5"}}></i>
+                <div className="position-absolute rounded-circle" style={{"height": "25%","width": "15%","left": "3%", "bottom": "-10%", "background": "white"}}></div>
+                <img className="position-absolute rounded-circle" height={100} style={{"left": "3%", "bottom": "-10%", "opacity": "0.5"}} src="/images/people.png" alt="..."/>
+                <i className="position-absolute bi bi-camera rounded-circle text-white fs-5 ps-2 pe-2 pt-1 pb-1" style={{"left": "7.5%", "bottom": "-3%", "background": "black", "opacity": "0.5"}}></i>
             </div>
-
-
             <form>
-                <div className="form-group pt-4">
-                    <label htmlFor="inputName">Name</label>
-                    <input type="text" className="form-control" id="inputName" placeholder="Name"
-                           value={name} onChange={(e) => {
-                        setName(e.target.value)
-                    }}/>
+                <div className="form-group pt-3"><label htmlFor="name" className="text-black-50 ms-3">Name</label>
+                    <input type="text" className="form-control" id="name" placeholder="Name" value={name} onChange={(e) => {setName(e.target.value)}}/>
                 </div>
-                <div className="form-group pt-4">
-                    <label htmlFor="inputBio">Bio</label>
-                    <textarea className="form-control" id="inputBio" placeholder="Bio"
-                              value={bio} onChange={(e) => setBio(e.target.value)}
+                <div className="form-group pt-3"><label htmlFor="inputBio" className="text-black-50  ms-3">Bio</label>
+                    <textarea className="form-control" id="inputBio" placeholder="Bio" value={bio} onChange={(e) => setBio(e.target.value)}/>
+                </div>
+                <div className="form-group pt-3"><label htmlFor="inputLocation" className="text-black-50  ms-3">Location</label>
+                    <input type="text" className="form-control" id="inputLocation" placeholder="Location" value={location} onChange={(e) => setLocation(e.target.value)}/>
+                </div>
+                <div className="form-group pt-3">
+                    <input type="text" className="form-control" id="inputWebsite" placeholder="Website" value={website} onChange={(e) => setWebsite(e.target.value)}
                     />
                 </div>
-                <div className="form-group pt-4">
-                    <label htmlFor="inputLocation">Location</label>
-                    <input type="text" className="form-control" id="inputLocation" placeholder="Location"
-                           value={location} onChange={(e) => setLocation(e.target.value)}
-                    />
-                </div>
-                <div className="form-group pt-4">
-                    <input type="text" className="form-control" id="inputWebsite" placeholder="Website"
-                           value={website} onChange={(e) => setWebsite(e.target.value)}
-                    />
-                </div>
-                <div className="form-group pt-4">
-                    <label htmlFor="inputBirthday">Birth date</label>
-                    <input type="date" className="form-control" id="inputBirthday" placeholder="Location"
-                           value={birthday} onChange={(e) => setBirthday(e.target.value)}
-                    />
+                <div className="form-group pt-3"><label htmlFor="Birthdate" className="text-black-50  ms-3">Birth date · <span style={{color:"deepskyblue"}}>Edit</span></label>
+                    <input type="date" className="form-control" id="Birthdate" placeholder="Location" value={birthday} onChange={(e) => setBirthday(e.target.value)}/>
                 </div>
             </form>
-
-            <div className="mt-4">
-                <i className="bi bi-arrow-right-short float-end fs-4"></i>
+            <div className="mt-4  ms-3">
+                <i className="bi bi-chevron-right float-end"></i>
                 <p>Switch to professional</p>
             </div>
-
         </>
     )
 }
-
 export default EditProfile;

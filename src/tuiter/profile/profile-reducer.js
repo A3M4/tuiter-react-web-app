@@ -4,17 +4,16 @@ const profile = {
     firstName: 'Yifeng',
     lastName: 'Li',
     handle: 'yifengli',
-    profilePicture: 'hahaha.png',
-    bannerPicture: 'hahaha.png',
-    bio: 'Basketball, Coding, Swimming',
-    website: 'www.yifengli.com',
+    profilePicture: 'people.png',
+    bannerPicture: 'pic.jpg',
+    bio: 'Basketball, Software Engineer, Swimming',
+    website: 'youtube.com/webdevtv',
     location: 'Toronto, Canada',
-    dateOfBirth : '02/02/1999',
-    dateJoined: '11/2022',
-    followingCount: 1234,
-    followersCount: 4321
+    dateOfBirth : '02/02/2022',
+    dateJoined: '04/2019',
+    followingCount: 345,
+    followersCount: 231
 }
-
 const profileSlice = createSlice({
     name: "profile",
     initialState: profile,
@@ -32,6 +31,5 @@ const profileSlice = createSlice({
         }
     }
 });
-
 export const {updateProfile} = profileSlice.actions;
 export default profileSlice.reducer;

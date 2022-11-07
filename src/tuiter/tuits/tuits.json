@@ -1,0 +1,40 @@
+[
+  {
+    "topic": "Space",
+    "userName": "SpaceX ",
+    "title": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on its 6' bed",
+    "time": "2h",
+    "avatarIcon": "../../../images/spacex.jpg",
+    "liked": true,
+    "replies": 123,
+    "retuits": 432,
+    "likes": 2345,
+    "handle": "spacex",
+    "tuit": "You want to wake up in the morning and think the future is going to be great You want to wake up in the morning and think the future is going to be great You want to wake up in the morning and think the future is going to be great You want to wake up in the morning and think the future is going to be great You want to wake up in the morning and think the future is going to be great"
+  },
+  {
+    "topic": "Energy",
+    "userName": "Tesla ",
+    "title": "Tesla FSD finally makes driving obsolete. After years of delay, Tesla Full Self Driving can drive you to work while you work, play, or sleep",
+    "time": "7d",
+    "avatarIcon": "../../../images/tesla.jpg",
+    "liked": false,
+    "replies": 807,
+    "retuits": 876,
+    "likes": 2345,
+    "handle": "tesla",
+    "tuit": "Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system"},
+  {
+    "topic": "Space",
+    "userName": "SpaceX ",
+    "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+    "time": "4h",
+    "avatarIcon": "../../../images/spacex.jpg",
+    "liked": true,
+    "replies": 432,
+    "retuits": 354,
+    "likes": 2345,
+    "handle": "spacex",
+    "tuit": "Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system Autopilot is an advanced driver assistance system "}
+
+  ]

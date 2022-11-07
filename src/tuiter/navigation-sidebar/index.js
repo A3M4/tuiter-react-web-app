@@ -1,65 +1,28 @@
-import React from 'react';
+import React from "react";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
 
-
 const NavigationSidebar = () => {
-    const {pathname} = useLocation();
-    const paths = pathname.split('/')
-    const active = paths[2] ? paths[2] : 'home';
+    const location = useLocation();
+    const {pathname,search} = location;
+    console.log(pathname,search);
+    const parts = pathname.split('/')
+    console.log(parts);
     return (
         <div className="list-group">
-            <li className="list-group-item "><i className="bi bi-twitter"></i></li>
-
-            <Link to="/tuiter/home"
-                  className={`list-group-item list-group-item-action ${active === 'home' ? 'active' : ''}`}>
-                <i className="bi bi-house-door-fill me-2"></i>
-                <span className="d-none d-xl-inline-block"> Home</span>
-            </Link>
-
-            <Link to="/tuiter/explore"
-                  className={`list-group-item list-group-item-action ${active === 'explore' ? 'active' : ''}`}>
-                <i className="bi bi-hash me-2"></i>
-                <span className="d-none d-xl-inline-block"> Explore</span>
-            </Link>
-
-            <Link to="/" className="list-group-item">
-                Labs
-            </Link>
-
-            <a href="/#" className={`list-group-item list-group-item-action ${active === 'notification' ? 'active' : ''}`}>
-                <i className="bi bi-bell-fill me-2"></i>
-                <span className="d-none d-xl-inline-block"> Notifications</span>
-            </a>
-
-            <a href="/#" className={`list-group-item list-group-item-action ${active === 'message' ? 'active' : ''}`}>
-                <i className="bi bi-envelope-fill me-2"></i>
-                <span className="d-none d-xl-inline-block"> Messages</span>
-            </a>
-
-            <a href="/#" className={`list-group-item list-group-item-action ${active === 'bookmarks' ? 'active' : ''}`}>
-                <i className="bi bi-bookmark-fill me-2"></i>
-                <span className="d-none d-xl-inline-block"> Bookmarks</span>
-            </a>
-
-            <a href="/#" className={`list-group-item list-group-item-action ${active === 'lists' ? 'active' : ''}`}>
-                <i className="bi bi-list-ul me-2"></i>
-                <span className="d-none d-xl-inline-block"> Lists</span>
-            </a>
-
-            <Link to="/tuiter/profile"
-                  className={`list-group-item list-group-item-action ${active === 'bookmarks' ? 'profile' : ''}`}>
-                <i className="bi bi-person-fill me-2"></i>
-                <span className="d-none d-xl-inline-block"> Profile</span>
-            </Link>
-
-            <a href="/#" className={`list-group-item list-group-item-action ${active === 'more' ? 'active' : ''}`}>
-                <i className="bi bi-three-dots me-2"></i>
-                <span className="d-none d-xl-inline-block"> More</span>
-            </a>
-
+            <a href ="/#" className="list-group-item">Tuiter</a>
+            <Link to ="/tuiter" href="#" className={`list-group-item ${parts.length <3 ?'active':''}`}><i className="bi bi-house-door-fill me-2"></i>Home</Link>
+            <Link to ="/tuiter/explore" href="#" className={`list-group-item ${parts[2] === 'explore'?'active':''}`}><i className="bi bi-hash me-2"></i>Explore</Link>
+            <Link to ="/" className="list-group-item"><i className="bi bi-asterisk me-2"></i>Labs</Link>
+            <a href ="/#" className={`list-group-item ${parts[2] === 'notifications'?'active':''}`}><i className="bi bi-bell me-2"></i>Notifications</a>
+            <a href ="/#" className={`list-group-item ${parts[2] === 'messages'?'active':''}`}><i className="bi bi-envelope me-2"></i>Messages</a>
+            <a href ="/#" className={`list-group-item ${parts[2] === 'bookmarks'?'active':''}`}><i className="bi bi-bookmark me-2"></i>Bookmarks</a>
+            <a href ="/#" className={`list-group-item ${parts[2] === 'lists'?'active':''}`}><i className="bi bi-card-list me-2"></i>Lists</a>
+            <Link to ="/tuiter/profile" href="#" className={`list-group-item ${parts[2] === 'profile'?'active':''} || ${parts[2] === 'edit-profile'?'active':''}`}><i className="bi bi-person me-2"></i>Profile</Link>
+            <a href ="/#" className={`list-group-item ${parts[2] === 'more'?'active':''}`}><i className="bi bi-three-dots me-2"></i>More</a>
         </div>
     );
 }
 
 export default NavigationSidebar;
+

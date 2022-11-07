@@ -3,7 +3,7 @@ import PostSummaryList from "../post-summary-list";
 import "./index.css";
 
 const ExploreComponent = () => {
-    return (
+    return(
         <>
             <div className="row">
                 <div className="col-11 position-relative">
@@ -19,17 +19,17 @@ const ExploreComponent = () => {
             </div>
             <ul className="nav nav-pills mb-2">
                 <li className="nav-item">
-                    <a className="nav-link active" href="/#">For You</a>
+                    <a href ="#/" className="nav-link active">For You</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">Trending</a>
+                    <a href ="#/" className="nav-link">Trending</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/#">News</a>
+                    <a href ="#/" className="nav-link">News</a>
                 </li>
             </ul>
             <div className="position-relative mb-2">
-                <img src="/images/starship.webp" className="w-100" alt="..."/>
+                <img src="../../../images/starship.jpg" className="w-100" alt="..."/>
                 <h1 className="position-absolute wd-nudge-up text-white">
                     SpaceX Starship</h1>
             </div>
@@ -38,4 +38,3 @@ const ExploreComponent = () => {
     );
 };
 export default ExploreComponent;
-

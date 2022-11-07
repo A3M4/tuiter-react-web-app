@@ -1,16 +1,18 @@
 [
   {
-    "avatarIcon": "spacex.jpeg",
-    "userName": "SpaceX",
-    "handle": "spacex"
-  },
-  {
-    "avatarIcon": "nasa.png",
     "userName": "NASA",
-    "handle": "NASA"
+    "handle": "NASA",
+    "avatarIcon": "../../../images/nasa.png"
   },
   {
-    "avatarIcon": "tesla.png",
     "userName": "Tesla",
-    "handle": "Tesla" }
+    "handle": "tesla",
+    "avatarIcon": "../../../images/tesla.jpg"
+  },
+  {
+    "userName": "SpaceX",
+    "handle": "SpaceX",
+    "avatarIcon": "../../../images/spacex.jpg"
+  }
 ]
+

@@ -1,10 +1,10 @@
-import {createSlice} from "@reduxjs/toolkit";
-import tuits from '../data/tuits.json';
+import { createSlice } from "@reduxjs/toolkit";
+import tuits from './tuits.json';
 
 const currentUser = {
     "userName": "NASA",
     "handle": "nasa",
-    "avatarIcon": "nasa.png",
+    "avatarIcon": "../../../images/nasa.png",
 };
 
 const templateTuit = {
