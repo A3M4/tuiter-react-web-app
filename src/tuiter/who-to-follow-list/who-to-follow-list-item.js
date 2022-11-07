@@ -3,10 +3,10 @@ import React from "react";
 
 const WhoToFollowListItem = (
     {
-        who = { userName: 'NASA', handle: 'NASA', avatarIcon: 'nasa.png' }
+        who = {userName: 'NASA', handle: 'NASA', avatarIcon: 'nasa.png'}
     }
 ) => {
-    return(
+    return (
         <li className="list-group-item">
             <div className="row">
                 <div className="col-2">

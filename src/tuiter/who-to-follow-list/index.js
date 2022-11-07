@@ -7,7 +7,7 @@ const WhoToFollowList = () => {
     const whoArray = useSelector(
         (state) => state.who);
 
-    return(
+    return (
         <ul className="list-group">
             <li className="list-group-item">
                 <h3>Who to follow</h3>

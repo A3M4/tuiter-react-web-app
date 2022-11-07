@@ -24,18 +24,19 @@ const TuitItem = (
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuit(id));
     }
-    return(
+    return (
         <li className="list-group-item">
             <div className="row">
                 <div className="col-1">
-                    <img className="rounded-circle" style={{"width": "50px"}} src={`/images/${post.avatarIcon}`} alt="..."/>
+                    <img className="rounded-circle" style={{"width": "50px"}} src={`/images/${post.avatarIcon}`}
+                         alt="..."/>
                 </div>
                 <div className="col-11 ps-4">
                     <div className="row">
                         <div className="row pe-0">
                             <div className="col-11">
                                 <span className="fw-bolder">{post.userName}</span>
-                                <i className="bi bi-patch-check-fill" style={{color:"blue"}}></i>
+                                <i className="bi bi-patch-check-fill" style={{color: "blue"}}></i>
                                 <span className="text-secondary"> @{post.handle} · {post.time}</span>
                             </div>
                             <div className="col-1 pe-0">
@@ -44,7 +45,7 @@ const TuitItem = (
                         </div>
                     </div>
                     <div>{post.tuit}</div>
-{/*                    <div className="rounded-3 mt-2">
+                    {/*                    <div className="rounded-3 mt-2">
                         <img src={`/images/${post.image}`} className="card-img-top rounded-3" alt="..."/>
                         {post.title2 || post.content2 || post.link ?
                             <div className=" border-secondary p-3">
@@ -61,7 +62,8 @@ const TuitItem = (
                             <i className="bi bi-repeat"></i><span className="ms-2">{post.retuits}</span>
                         </div>
                         <div className="col-3">
-                            {post.liked? <i className="bi bi-heart-fill text-danger"></i>: <i className="bi bi-heart"></i>}
+                            {post.liked ? <i className="bi bi-heart-fill text-danger"></i> :
+                                <i className="bi bi-heart"></i>}
                             <span className="ms-2">{post.likes}</span>
                         </div>
                         <div className="col-3">

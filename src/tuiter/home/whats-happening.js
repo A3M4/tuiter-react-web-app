@@ -36,7 +36,9 @@ const WhatsHappening = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-12"><hr/></div>
+            <div className="col-12">
+                <hr/>
+            </div>
         </div>
     );
 }

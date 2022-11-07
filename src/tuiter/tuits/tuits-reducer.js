@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import tuits from './tuits.json';
 
 const currentUser = {
@@ -30,7 +30,7 @@ const tuitSlice = createSlice({
             })
         },
         deleteTuit(state, action) {
-            const index = state.findIndex(tuit =>tuit._id === action.payload);
+            const index = state.findIndex(tuit => tuit._id === action.payload);
             state.splice(index, 1);
         }
     }

@@ -9,7 +9,7 @@ const profile = {
     bio: 'Basketball, Software Engineer, Swimming',
     website: 'youtube.com/webdevtv',
     location: 'Toronto, Canada',
-    dateOfBirth : '02/02/2022',
+    dateOfBirth: '02/02/2022',
     dateJoined: '04/2019',
     followingCount: 345,
     followersCount: 231
