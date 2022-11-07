@@ -18,7 +18,7 @@ const Profile = () => {
             </div>
             <div className="position-relative mt-2">
                 <img className="w-100" src="/images/pic.jpg" alt="..."/>
-                <img className="position-absolute rounded-circle" height={110} style={{"left": "4%", "bottom": "-13%"}}
+                <img className="position-absolute rounded-circle" height={120} style={{"left": "5%", "bottom": "-12%"}}
                      src="/images/people.png" alt="..."/>
             </div>
             <Link to="/tuiter/edit-profile" className="clearfix">
@@ -26,20 +26,20 @@ const Profile = () => {
                     Edit Profile
                 </button>
             </Link>
+
+
             <div className="mt-4">
-                <h4 className="m-0"><b>{profile.firstName + " " + profile.lastName}</b></h4>
+                <h3 className="m-0">{profile.firstName}</h3>
                 <p className="text-secondary">@{profile.handle}</p>
                 <p>{profile.bio}</p>
-                <p className='text-black-50'>
-                    <i className="bi bi-geo-alt "></i> {profile.location}
-                    <i className="bi bi-balloon ms-2"></i> Born {profile.dateOfBirth}
-                    <i className="bi bi-calendar3 ms-2"></i> Joined {profile.dateJoined}
+                <p>
+                    <i className="bi bi-geo-alt"></i>{profile.location}
+                    <i className="bi bi-balloon ms-3"></i>Born {profile.dateOfBirth}
+                    <i className="bi bi-calendar ms-3"></i>Joined {profile.dateJoined}
                 </p>
                 <p>
-                    <span><b>{profile.followingCount}</b></span>
-                    <span className='text-black-50'> Following</span>
-                    <span className='ms-4'><b>{profile.followersCount}</b></span>
-                    <span className='text-black-50'> Followers</span>
+                    <span className="fw-bold">{profile.followingCount}</span> following
+                    <span className='fw-bold ms-3'>{profile.followersCount}</span> follower
                 </p>
             </div>
 
