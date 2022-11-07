@@ -41,24 +41,23 @@ const EditProfile = () => {
                     "bottom": "-9%",
                     "background": "white"
                 }}></div>
-                <img className="position-absolute rounded-circle" height={110}
-                     style={{"left": "5%", "bottom": "-13%", "opacity": "0.7"}} src="/images/people.png" alt="..."/>
+                <img className="position-absolute rounded-circle" height={109}
+                     style={{"left": "4%", "bottom": "-8.5%", "opacity": "0.7"}} src="/images/people.png" alt="..."/>
                 <i className="position-absolute bi bi-camera rounded-circle text-white fs-5 ps-2 pe-2 pt-1 pb-1"
-                   style={{"left": "8%", "bottom": "-4%", "background": "black", "opacity": "0.7"}}></i>
+                   style={{"left": "10%", "bottom": "-1%", "background": "black", "opacity": "0.7"}}></i>
             </div>
             <form>
-                <div className="form-group pt-3"><label htmlFor="name" className="text-black-50 ms-3">Name</label>
+                <div className="form-group pt-3"><label htmlFor="name">Name</label>
                     <input type="text" className="form-control" id="name" placeholder="Name" value={name}
                            onChange={(e) => {
                                setName(e.target.value)
                            }}/>
                 </div>
-                <div className="form-group pt-3"><label htmlFor="inputBio" className="text-black-50  ms-3">Bio</label>
+                <div className="form-group pt-3"><label htmlFor="inputBio">Bio</label>
                     <textarea className="form-control" id="inputBio" placeholder="Bio" value={bio}
                               onChange={(e) => setBio(e.target.value)}/>
                 </div>
-                <div className="form-group pt-3"><label htmlFor="inputLocation"
-                                                        className="text-black-50  ms-3">Location</label>
+                <div className="form-group pt-3"><label htmlFor="inputLocation">Location</label>
                     <input type="text" className="form-control" id="inputLocation" placeholder="Location"
                            value={location} onChange={(e) => setLocation(e.target.value)}/>
                 </div>
@@ -67,7 +66,7 @@ const EditProfile = () => {
                            onChange={(e) => setWebsite(e.target.value)}
                     />
                 </div>
-                <div className="form-group pt-3"><label htmlFor="Birthdate" className="text-black-50  ms-3">Birth date
+                <div className="form-group pt-3"><label htmlFor="Birthdate">Birth date
                     · <span style={{color: "deepskyblue"}}>Edit</span></label>
                     <input type="date" className="form-control" id="Birthdate" placeholder="Location" value={birthday}
                            onChange={(e) => setBirthday(e.target.value)}/>

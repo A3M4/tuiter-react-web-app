@@ -23,8 +23,8 @@ const profileSlice = createSlice({
             let [firstName, ...lastName] = updatedProfile.name.split('/');
             lastName = lastName.join(' ');
             const bio = updatedProfile.bio;
-            const location = updatedProfile.location;
             const website = updatedProfile.website;
+            const location = updatedProfile.location;
             const [year, month, day] = updatedProfile.birthday.split('-');
             const dateOfBirth = [month, day, year].join('/');
             return {...state, firstName, lastName, bio, location, website, dateOfBirth}
