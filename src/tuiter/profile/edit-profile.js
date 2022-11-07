@@ -31,20 +31,20 @@ const EditProfile = () => {
             <div className="position-relative mt-3 mb-4">
                 <img className="w-100" style={{"opacity": "0.5"}} src="/images/pic.jpg" alt="..."/>
                 <i className="position-absolute bi bi-camera rounded-circle text-white fs-5 ps-2 pe-2 pt-1 pb-1"
-                   style={{"left": "42%", "bottom": "50%", "background": "black", "opacity": "0.5"}}></i>
+                   style={{"left": "44%", "bottom": "52%", "background": "black", "opacity": "0.7"}}></i>
                 <i className="position-absolute rounded-circle text-white bi bi-x fs-5 ps-2 pe-2 pt-1 pb-1"
-                   style={{"left": "55%", "bottom": "50%", "background": "black", "opacity": "0.5"}}></i>
+                   style={{"left": "57%", "bottom": "52%", "background": "black", "opacity": "0.7"}}></i>
                 <div className="position-absolute rounded-circle" style={{
-                    "height": "25%",
-                    "width": "15%",
-                    "left": "3%",
-                    "bottom": "-10%",
+                    "height": "28%",
+                    "width": "17%",
+                    "left": "4%",
+                    "bottom": "-9%",
                     "background": "white"
                 }}></div>
-                <img className="position-absolute rounded-circle" height={100}
-                     style={{"left": "3%", "bottom": "-10%", "opacity": "0.5"}} src="/images/people.png" alt="..."/>
+                <img className="position-absolute rounded-circle" height={110}
+                     style={{"left": "5%", "bottom": "-13%", "opacity": "0.7"}} src="/images/people.png" alt="..."/>
                 <i className="position-absolute bi bi-camera rounded-circle text-white fs-5 ps-2 pe-2 pt-1 pb-1"
-                   style={{"left": "7.5%", "bottom": "-3%", "background": "black", "opacity": "0.5"}}></i>
+                   style={{"left": "8%", "bottom": "-4%", "background": "black", "opacity": "0.7"}}></i>
             </div>
             <form>
                 <div className="form-group pt-3"><label htmlFor="name" className="text-black-50 ms-3">Name</label>
