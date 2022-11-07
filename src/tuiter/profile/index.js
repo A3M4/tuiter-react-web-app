@@ -18,7 +18,7 @@ const Profile = () => {
             </div>
             <div className="position-relative mt-2">
                 <img className="w-100" src="/images/pic.jpg" alt="..."/>
-                <img className="position-absolute rounded-circle" height={100} style={{"left": "3%", "bottom": "-10%"}} src="/images/people.png" alt="..."/>
+                <img className="position-absolute rounded-circle" height={110} style={{"left": "4%", "bottom": "-13%"}} src="/images/people.png" alt="..."/>
             </div>
             <Link to="/tuiter/edit-profile" className="clearfix">
                 <button className="btn btn-light fw-bold rounded-pill float-end mt-3">
