@@ -5,8 +5,6 @@ import {Link} from "react-router-dom";
 
 const Profile = () => {
     const profile = useSelector(state => state.profile);
-
-
     return (
         <>
             <Link to="/tuiter">
