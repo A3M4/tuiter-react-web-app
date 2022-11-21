@@ -1,17 +1,14 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector}
-    from "react-redux";
+import React, {useEffect}  from 'react';
 import TuitItem from "./tuit-item";
-import {findTuitsThunk}
-    from "../../services/tuits-thunks";
+import {useDispatch, useSelector} from "react-redux";
+import {findTuitsThunk} from "../../services/tuits-thunks";
 
-const TuitsList = () => {
-    const {tuits, loading} = useSelector(
-        state => state.tuitsData)
+const TuitList = () => {
+    const {tuits, loading}  = useSelector(state => state.tuitsData);
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(findTuitsThunk())
+    useEffect(() => {dispatch(findTuitsThunk())
     }, [])
+
     return (
         <ul className="list-group">
             {
@@ -20,8 +17,12 @@ const TuitsList = () => {
                     Loading...
                 </li>
             }
-            ...
+            {
+                tuits.map(post =>
+                    <TuitItem key={post._id} post={post}/>)
+            }
         </ul>
-    );
-};
-export default TuitsList;
+    )
+}
+
+export default TuitList;

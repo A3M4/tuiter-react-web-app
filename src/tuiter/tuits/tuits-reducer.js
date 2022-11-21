@@ -1,5 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {updateTuitThunk, createTuitThunk, deleteTuitThunk, findTuitsThunk} from "../../services/tuits-thunks";
+import { createSlice } from "@reduxjs/toolkit";
+import {updateTuitThunk,createTuitThunk, deleteTuitThunk,findTuitsThunk} from "../../services/tuits-thunks";
 
 const initialState = {
     tuits: [],
@@ -33,7 +33,7 @@ const tuitSlice = createSlice({
                 state.tuits = []
             },
         [findTuitsThunk.fulfilled]:
-            (state, {payload}) => {
+            (state, { payload }) => {
                 state.loading = false
                 state.tuits = payload
             },
@@ -41,20 +41,20 @@ const tuitSlice = createSlice({
             (state) => {
                 state.loading = false
             },
-        [deleteTuitThunk.fulfilled]:
-            (state, {payload}) => {
+        [deleteTuitThunk.fulfilled] :
+            (state, { payload }) => {
                 state.loading = false
                 state.tuits = state.tuits
                     .filter(t => t._id !== payload)
             },
         [createTuitThunk.fulfilled]:
-            (state, {payload}) => {
+            (state, { payload }) => {
                 state.loading = false
                 console.log({...payload, ...templateTuit})
                 state.tuits.push({...payload, ...templateTuit})
             },
         [updateTuitThunk.fulfilled]:
-            (state, {payload}) => {
+            (state, { payload }) => {
                 state.loading = false
                 const tuitNdx = state.tuits.findIndex((t) => t._id === payload._id)
                 state.tuits[tuitNdx] = {
@@ -62,7 +62,7 @@ const tuitSlice = createSlice({
                     ...payload
                 }
             }
-    }
+    },
 });
 
 export const {createTuit, deleteTuit} = tuitSlice.actions;

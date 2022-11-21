@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {deleteTuitThunk} from "../../services/tuits-thunks";
+import {deleteTuitThunk, updateTuitThunk} from "../../services/tuits-thunks";
 
 const TuitItem = (
     {
@@ -24,19 +24,18 @@ const TuitItem = (
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuitThunk(id));
     }
-    return (
+    return(
         <li className="list-group-item">
             <div className="row">
                 <div className="col-1">
-                    <img className="rounded-circle" style={{"width": "50px"}} src={`/images/${post.avatarIcon}`}
-                         alt="..."/>
+                    <img className="rounded-circle" style={{"width": "50px"}} src={`/images/${post.avatarIcon}`} alt="..."/>
                 </div>
                 <div className="col-11 ps-4">
                     <div className="row">
                         <div className="row pe-0">
                             <div className="col-11">
-                                <span className="fw-bolder">{post.userName}</span>
-                                <i className="bi bi-patch-check-fill" style={{color: "blue"}}></i>
+                                <span className="fw-bolder">{post.userName} </span>
+                                <i className=" bi bi-patch-check-fill" style={{color:"blue"}}></i>
                                 <span className="text-secondary"> @{post.handle} · {post.time}</span>
                             </div>
                             <div className="col-1 pe-0">
@@ -44,27 +43,28 @@ const TuitItem = (
                             </div>
                         </div>
                     </div>
+
                     <div>{post.tuit}</div>
-                    {/*                    <div className="rounded-3 mt-2">
-                        <img src={`/images/${post.image}`} className="card-img-top rounded-3" alt="..."/>
-                        {post.title2 || post.content2 || post.link ?
-                            <div className=" border-secondary p-3">
-                                {post.title2 ? <p className="card-text mb-0">{post.title2}</p> : ""}
-                                {post.content2 ? <p className="text-secondary mb-0">{post.content2}</p> : ""}{post.content2 ? <p className="text-secondary mb-0"><i className="bi bi-link-45deg"></i>{post.link}</p> : ""}
-                            </div>
-                            : ""}
-                    </div>*/}
                     <div className="row mt-3">
-                        <div className="col-3">
+                        <div className="col-2">
                             <i className="bi bi-chat"></i><span className="ms-2">{post.replies}</span>
                         </div>
-                        <div className="col-3">
+                        <div className="col-2">
                             <i className="bi bi-repeat"></i><span className="ms-2">{post.retuits}</span>
                         </div>
-                        <div className="col-3">
-                            {post.liked ? <i className="bi bi-heart-fill text-danger"></i> :
-                                <i className="bi bi-heart"></i>}
-                            <span className="ms-2">{post.likes}</span>
+                        <div className="col-2">
+                            <i className="bi bi-heart-fill me-2 text-danger" onClick={() => dispatch(updateTuitThunk({
+                                ...post,
+                                likes: post.likes + 1
+                            }))} ></i>
+                            {post.likes}
+                        </div>
+                        <div className="col-2">
+                            <i className=" bi bi-hand-thumbs-down-fill me-2" onClick={() => dispatch(updateTuitThunk({
+                                ...post,
+                                dislikes: post.dislikes + 1
+                            }))} ></i>
+                            {post.dislikes}
                         </div>
                         <div className="col-3">
                             <i className="bi bi-share"></i>
